@@ -14,7 +14,7 @@
   "keywords": [
     "none"
   ],
-  "author": "james foley",
+  "author": "Stefano Torres",
   "license": "MIT",
   "dependencies": {
     "cookie-session": "^1.4.0",
