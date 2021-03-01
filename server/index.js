@@ -10,6 +10,7 @@ const cookSession = require('cookie-session')
 
 // Importing our Login Service Used With the POST Login Route
 const loginService = require('./services/loginService')
+const fileService = require('./services/fileService')
 
 
 
@@ -101,15 +102,15 @@ app.use(express.static(path.join(__dirname, "../client"), {extensions: ["html", 
   })
     
  
- app.post('/login', (req, res)=>{
+ app.post('/signup', (req, res)=>{
    // POST name value pairs in body request
    const credentials = {
      email:req.body.email,
      password:req.body.password
     }
+    fileService.writeFileContents('../data/users.json',credentials)
     
     
-    const isValidUser = loginService.authenticate(credentials)
    
     res.end()
  
