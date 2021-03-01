@@ -1,4 +1,3 @@
-const { response } = require("express")
 
 window.addEventListener('load',function(e){
     console.log(e) 
